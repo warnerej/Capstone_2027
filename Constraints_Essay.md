@@ -7,7 +7,7 @@ CS5001
 # Project Constraints Essay
 ## Social Calendar Browser Extension
 ### Security
-Security is an imperative constraint because the extension would interact with users' Google Calendar data. Google Calendar is a widely used application; it has workplace, school, and personal uses. The project must use Google's Calendar API permissions rather than allowing unrestricted access to users' calendars. This directly puts pressure on the **Social** constraint, as stronger privacy restrictions would limit what users can share and what other users can see.
+Security is an imperative constraint because the extension would interact with users' Google Calendar data. Google Calendar is a widely used application; it has workplace, school, and personal uses. The project must use Google's Calendar API permissions rather than allowing unrestricted access to users' calendars. This directly puts pressure on the **Social** constraint, as stronger privacy restrictions would limit what users can share and what other users can see. We have decided to defer to **Security** when these two constraints are in tension, as cutting corners security can have enormous repurcussions. 
 
 ### Social
 Social constraints are central to this project for obvious reasons: the extension is designed to connect users through shared calendars, comments, and collaborative events. It should support coordination and social connection, or else it is ineffective. It should, however, give users control over whoe can view their calendars and interact with their schedules.
