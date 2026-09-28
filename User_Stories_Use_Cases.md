@@ -23,6 +23,35 @@ CS5001
 ## INVEST Check
 
 ## Use Cases
+### _UC01 - Planning Full Commute with Shuttle Times_:
+  - Primary Actor: UC Student
+  - Secondary Actors: UC Shuttle Tracking API, Weather Data API
+  - Preconditions: The device is powered on, connected to the internet, and configured with the student’s zip code/preferred shuttle stop
+ 
+  #### Main Flow:
+  1) **Actor**: The student views the display device in the morning.
+  2) **System**: The system fetches and displays the current day's weather forecast (temperature, precipitation chance, etc.).
+  3) **Actor**: The student notices a high chance of rain and decides to check the shuttle times.
+  4) **System**: The system fetches live tracking data from the Shuttle Tracking API for their desired stop.
+  5) **System**: The system displays the _estimated_ arrival times for the next 3 arriving shuttles.
+
+  #### Alternate Flow:
+  - **At Step 3:** The student sees clear weather with a 0% chance of rain, decides to walk to class, and does not interact further with the display.
+  - **System:** The system does not issue a request to the UC Shuttle Tracking API.
+
+  #### Exception Flow:
+  - **At Step 4:** The system sends a GET request to the UC Shuttle Tracking API, but the API times out or returns a server error.
+  - **System Action:** 
+    1) The system displays an error banner reading "Live tracking unavailable."
+    2) The system falls back to displaying the static, scheduled arrival times stored locally for that stop (based on history).
 
 ## Acceptance Criteria
-- _AC-01.1_:
+- _AC-01.1_:\
+  **Given** the display is connected to the internet and configured for the students stop,\
+  **When** the student opens the Shuttle view,\
+  **Then** the system displays the estimated arrival times for the next 3 scheduled shuttles and refreshes every 60 seconds.
+
+- _AC-01.2_:\
+  **Given** the UC Shuttle Tracking API fails to respond in 5 seconds,\
+  **When** the system is requesting live data,\
+  **Then** the system will display a visual "Live tracking is unavailable" message 
