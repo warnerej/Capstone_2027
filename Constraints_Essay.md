@@ -5,12 +5,12 @@ CS5001
 9/17/26
 
 # Project Constraints Essay
-## Social Calendar Browser Extension
-### Security
-Security is an imperative constraint because the extension would interact with users' Google Calendar data. Google Calendar is a widely used application; it has workplace, school, and personal uses. The project must use Google's Calendar API permissions rather than allowing unrestricted access to users' calendars. This directly puts pressure on the **Social** constraint, as stronger privacy restrictions would limit what users can share and what other users can see. We have decided to defer to **Security** when these two constraints are in tension, as cutting corners security can have enormous repurcussions. 
+## Open-Source Deskmate Display Device and Development Library
+### Economic
+Economic constraints are important because the physical product must be affordable for the general public (a budget of $150 is deemed as reasonable). The product requires obtaining an Orange Pi Zero 3 and a 64x32 LED display. The team must prioritize these components and avoid unnecessary hardware so that the device remains affordable to build and reproduce. This limits the complexity of the physical device and encourages us to perform application processing directly on the Orange Pi device rather than deferring computing to more expensive hardware.
 
-### Social
-Social constraints are central to this project for obvious reasons: the extension is designed to connect users through shared calendars, comments, and collaborative events. It should support coordination and social connection, or else it is ineffective. It should, however, give users control over whoe can view their calendars and interact with their schedules.
+### Professional
+Professional constraints are important because the project is being developed by a three-person team, so the software must be maintainable and understandable by developers beyond the original team. The open-source application library should hide boilerplate code behind a simple API so that users can focus on creating applications themselves, rather than how to communicate with the display board and Orange Pi. This creates a conflict between Professional and Economic constraints because creating a well-documented, reusable library requires additional development time. We therefore need to limit the initial library to a manageable set of core features while leaving the architecture extensible for future contributors.
 
 ### Legal
-Legal constraints are an essential factor of this project because the extension would access Google Calendar data through the Google Calendar API and would likely store comments and shared events. Therefore, the design must comply with Google's API policies and privacy guidelines. This would in turn limit how calendar information can be collected, stored, and displayed to other users.
+Legal constraints factor into this project because the application will be open-source and may eventually include code or dependencies created by other developers. The team must therefore select compatible open-source licenses for our own code and follow the license requirements of any third-party libraries used to control the Orange Pi or LED display.

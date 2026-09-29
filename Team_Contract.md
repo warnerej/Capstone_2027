@@ -64,7 +64,9 @@ Decision-making will follow a simple flow. First, any team member can propose id
 
 If conflict arises, it is expected that the conflict remains between those initially involved unless an agreement cannot be reached. Bloating conflict wastes valuable time and pulls other team members/the advisor into often small disagreements. If a conclusion cannot be reached initially, those involved will bring it to the entire team during the weekly meeting and each communicate their stance. If the conflict remains unresolved, the team will collectively take the conflict to the advisor for their input. As a last resort, the instructor will be called to action to be involved in handling the conflict. 
 
-Signatures Nathaniel Heath – 9/17/26
+Signatures
+
+Nathaniel Heath – 9/17/26
 
 Elliot Warner – 9/17/26
 
